@@ -1,0 +1,922 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.M5Rules -M 4.0
+Relation:     competition-3
+Instances:    36288
+Attributes:   14
+              Hour
+              Starting minute (inclussive)
+              Ending minute (exclussive)
+              Generated power
+              TemperatureC
+              DewpointC
+              PressurehPa
+              WindDirectionDegrees
+              WindSpeedKMH
+              WindSpeedGustKMH
+              Humidity
+              HourlyPrecipMM
+              dailyrainMM
+              SolarRadiationWatts_m2
+Test mode:    split 80% train, remainder test
+
+=== Classifier model (full training set) ===
+
+M5 pruned model rules 
+(using smoothed linear models) :
+Number of Rules : 41
+
+Rule: 1
+IF
+	Hour <= 6.5
+THEN
+
+Generated power = 
+	-0.0018 * Hour 
+	- 0.0087 * TemperatureC 
+	+ 0.0382 * DewpointC 
+	- 0.0013 * PressurehPa 
+	- 0.0004 * WindDirectionDegrees 
+	- 0.0032 * WindSpeedKMH 
+	+ 0.0029 * Humidity 
+	+ 0.0078 * dailyrainMM 
+	+ 0.0068 * SolarRadiationWatts_m2 
+	+ 1.5143 [10584/0.558%]
+
+Rule: 2
+IF
+	Hour > 19.5
+THEN
+
+Generated power = 
+	-0.0308 * Hour 
+	+ 0.0137 * TemperatureC 
+	+ 0.0769 * DewpointC 
+	- 0.0038 * PressurehPa 
+	- 0.0003 * WindDirectionDegrees 
+	- 0.0074 * WindSpeedKMH 
+	- 0.0048 * WindSpeedGustKMH 
+	+ 0.0092 * Humidity 
+	+ 0.0194 * dailyrainMM 
+	+ 0.0117 * SolarRadiationWatts_m2 
+	+ 4.4667 [6048/0.909%]
+
+Rule: 3
+IF
+	SolarRadiationWatts_m2 <= 453
+	Hour > 15.5
+	SolarRadiationWatts_m2 <= 92
+	PressurehPa > 1015.5
+	SolarRadiationWatts_m2 <= 2.5
+THEN
+
+Generated power = 
+	-0.3721 * Hour 
+	- 0.0071 * Starting minute (inclussive) 
+	- 0.0731 * TemperatureC 
+	+ 0.378 * DewpointC 
+	- 0.0224 * PressurehPa 
+	- 0.0004 * WindDirectionDegrees 
+	+ 0.0075 * WindSpeedKMH 
+	+ 0.021 * WindSpeedGustKMH 
+	- 0.003 * Humidity 
+	- 0.0698 * HourlyPrecipMM 
+	+ 0.0505 * dailyrainMM 
+	+ 0.0807 * SolarRadiationWatts_m2 
+	+ 28.667 [1691/0.275%]
+
+Rule: 4
+IF
+	SolarRadiationWatts_m2 <= 461.5
+	Hour <= 8.5
+	SolarRadiationWatts_m2 <= 57
+	Hour <= 7.5
+THEN
+
+Generated power = 
+	1.287 * Hour 
+	+ 0.0187 * Starting minute (inclussive) 
+	+ 0.0373 * TemperatureC 
+	+ 0.4846 * DewpointC 
+	- 0.0152 * PressurehPa 
+	+ 0.001 * WindDirectionDegrees 
+	- 0.0163 * WindSpeedKMH 
+	+ 0.0117 * WindSpeedGustKMH 
+	+ 0.018 * Humidity 
+	- 0.1395 * HourlyPrecipMM 
+	+ 0.0425 * dailyrainMM 
+	+ 4.3385 * SolarRadiationWatts_m2 
+	+ 18.9759 [1306/3.523%]
+
+Rule: 5
+IF
+	SolarRadiationWatts_m2 <= 474
+	Hour <= 14.5
+	Hour <= 9.5
+	Hour > 8.5
+THEN
+
+Generated power = 
+	2.3038 * Hour 
+	+ 6.0749 * Starting minute (inclussive) 
+	+ 34.566 * TemperatureC 
+	+ 29.0293 * DewpointC 
+	- 1.6268 * PressurehPa 
+	+ 0.2184 * WindDirectionDegrees 
+	- 0.0279 * WindSpeedKMH 
+	- 3.1794 * WindSpeedGustKMH 
+	+ 6.789 * Humidity 
+	- 0.3227 * HourlyPrecipMM 
+	+ 0.0371 * dailyrainMM 
+	+ 1.2865 * SolarRadiationWatts_m2 
+	+ 680.2044 [1369/29.951%]
+
+Rule: 6
+IF
+	SolarRadiationWatts_m2 <= 474
+	Hour > 14.5
+	SolarRadiationWatts_m2 <= 143
+	Humidity > 31.5
+	SolarRadiationWatts_m2 <= 41
+THEN
+
+Generated power = 
+	-1.3119 * Hour 
+	- 0.0306 * Starting minute (inclussive) 
+	- 0.1573 * TemperatureC 
+	+ 0.8665 * DewpointC 
+	- 0.0705 * PressurehPa 
+	+ 0.0008 * WindDirectionDegrees 
+	+ 0.0042 * WindSpeedKMH 
+	+ 0.0359 * WindSpeedGustKMH 
+	- 0.0141 * Humidity 
+	- 0.4223 * HourlyPrecipMM 
+	+ 0.0856 * dailyrainMM 
+	+ 5.3144 * SolarRadiationWatts_m2 
+	+ 95.4264 [1197/2.752%]
+
+Rule: 7
+IF
+	SolarRadiationWatts_m2 <= 503.5
+	Hour > 14.5
+	SolarRadiationWatts_m2 <= 180
+THEN
+
+Generated power = 
+	-110.9766 * Hour 
+	- 3.0917 * Starting minute (inclussive) 
+	- 33.1424 * TemperatureC 
+	+ 76.7131 * DewpointC 
+	- 0.0212 * PressurehPa 
+	+ 0.0004 * WindDirectionDegrees 
+	+ 0.009 * WindSpeedKMH 
+	+ 3.7666 * WindSpeedGustKMH 
+	- 9.6891 * Humidity 
+	- 0.0769 * HourlyPrecipMM 
+	+ 10.1542 * dailyrainMM 
+	+ 2.7267 * SolarRadiationWatts_m2 
+	+ 2550.5552 [2129/19.92%]
+
+Rule: 8
+IF
+	SolarRadiationWatts_m2 <= 503.5
+	Hour > 8.5
+THEN
+
+Generated power = 
+	-68.7218 * Hour 
+	- 0.0039 * Starting minute (inclussive) 
+	- 31.8507 * TemperatureC 
+	+ 120.8596 * DewpointC 
+	- 3.1682 * PressurehPa 
+	+ 0.2336 * WindDirectionDegrees 
+	- 0.0043 * WindSpeedKMH 
+	+ 11.0541 * WindSpeedGustKMH 
+	- 2.6016 * Humidity 
+	- 32.1475 * HourlyPrecipMM 
+	+ 18.661 * dailyrainMM 
+	+ 4.0083 * SolarRadiationWatts_m2 
+	+ 3531.2595 [6449/52.112%]
+
+Rule: 9
+IF
+	SolarRadiationWatts_m2 > 461
+	Hour <= 13.5
+	SolarRadiationWatts_m2 > 641
+	SolarRadiationWatts_m2 > 771
+THEN
+
+Generated power = 
+	91.0598 * Hour 
+	- 4.3442 * Starting minute (inclussive) 
+	- 20.3612 * TemperatureC 
+	+ 69.8677 * DewpointC 
+	- 14.3905 * PressurehPa 
+	+ 0.0006 * WindDirectionDegrees 
+	- 9.4262 * WindSpeedKMH 
+	+ 8.0494 * WindSpeedGustKMH 
+	- 4.3512 * Humidity 
+	+ 0.1353 * dailyrainMM 
+	- 1.5138 * SolarRadiationWatts_m2 
+	+ 19865.9997 [489/25.267%]
+
+Rule: 10
+IF
+	SolarRadiationWatts_m2 > 461
+	Hour <= 14.5
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 584.5
+	Hour <= 13.5
+THEN
+
+Generated power = 
+	-17.8358 * Hour 
+	- 3.6405 * Starting minute (inclussive) 
+	- 69.7195 * TemperatureC 
+	+ 24.9418 * DewpointC 
+	+ 20.9566 * PressurehPa 
+	- 0.2902 * WindSpeedKMH 
+	+ 5.7789 * WindSpeedGustKMH 
+	- 13.9305 * Humidity 
+	- 48.8352 * dailyrainMM 
+	+ 10.5527 * SolarRadiationWatts_m2 
+	- 22362.4322 [556/21.469%]
+
+Rule: 11
+IF
+	SolarRadiationWatts_m2 <= 461
+	SolarRadiationWatts_m2 <= 80
+	WindSpeedKMH > 0.5
+	SolarRadiationWatts_m2 > 27
+THEN
+
+Generated power = 
+	-1.9712 * Hour 
+	- 1.1398 * Starting minute (inclussive) 
+	+ 20.3172 * TemperatureC 
+	- 5.3767 * DewpointC 
+	- 2.959 * PressurehPa 
+	- 0.0013 * WindDirectionDegrees 
+	- 0.1216 * WindSpeedKMH 
+	- 0.2033 * WindSpeedGustKMH 
+	+ 5.0457 * Humidity 
+	+ 0.1372 * dailyrainMM 
+	+ 3.1813 * SolarRadiationWatts_m2 
+	+ 2548.6047 [400/5.015%]
+
+Rule: 12
+IF
+	SolarRadiationWatts_m2 <= 461
+	SolarRadiationWatts_m2 <= 56.5
+	WindSpeedKMH > 0.5
+THEN
+
+Generated power = 
+	-1.7867 * Hour 
+	+ 0.0632 * Starting minute (inclussive) 
+	- 0.2793 * TemperatureC 
+	+ 0.3003 * DewpointC 
+	- 0.0231 * PressurehPa 
+	- 0.193 * WindSpeedKMH 
+	- 0.2457 * WindSpeedGustKMH 
+	+ 0.0805 * Humidity 
+	- 0.069 * dailyrainMM 
+	+ 0.1721 * SolarRadiationWatts_m2 
+	+ 89.2979 [304/3.052%]
+
+Rule: 13
+IF
+	SolarRadiationWatts_m2 <= 461
+	DewpointC <= 6.5
+	PressurehPa > 1024.5
+THEN
+
+Generated power = 
+	-1.6037 * Hour 
+	+ 0.0125 * Starting minute (inclussive) 
+	- 1.5367 * TemperatureC 
+	+ 3.3484 * DewpointC 
+	+ 0.0077 * PressurehPa 
+	- 0.1859 * WindSpeedKMH 
+	- 0.2872 * WindSpeedGustKMH 
+	- 0.3937 * Humidity 
+	+ 0.1837 * dailyrainMM 
+	+ 0.1544 * SolarRadiationWatts_m2 
+	+ 242.6296 [211/4.71%]
+
+Rule: 14
+IF
+	SolarRadiationWatts_m2 <= 461
+	DewpointC <= 6.5
+THEN
+
+Generated power = 
+	0.2336 * Hour 
+	+ 1.6042 * Starting minute (inclussive) 
+	- 17.4556 * TemperatureC 
+	+ 23.8533 * DewpointC 
+	- 0.0082 * PressurehPa 
+	- 0.0126 * WindDirectionDegrees 
+	- 0.2156 * WindSpeedKMH 
+	- 0.3476 * WindSpeedGustKMH 
+	- 0.1157 * Humidity 
+	+ 0.7689 * SolarRadiationWatts_m2 
+	+ 253.7664 [339/10.527%]
+
+Rule: 15
+IF
+	SolarRadiationWatts_m2 > 672
+	Hour <= 14.5
+	Hour <= 13.5
+	SolarRadiationWatts_m2 > 725
+	PressurehPa > 1019.5
+THEN
+
+Generated power = 
+	-106.5762 * Hour 
+	- 3.2543 * Starting minute (inclussive) 
+	- 94.3804 * TemperatureC 
+	+ 56.8714 * DewpointC 
+	- 16.6416 * PressurehPa 
+	- 0.504 * WindDirectionDegrees 
+	- 0.3098 * WindSpeedKMH 
+	+ 0.0703 * WindSpeedGustKMH 
+	- 23.5297 * Humidity 
+	+ 0.313 * dailyrainMM 
+	+ 0.9768 * SolarRadiationWatts_m2 
+	+ 24956.4898 [178/16.024%]
+
+Rule: 16
+IF
+	SolarRadiationWatts_m2 > 672
+	Hour <= 14.5
+	Hour <= 13.5
+	Humidity > 66.5
+THEN
+
+Generated power = 
+	178.5439 * Hour 
+	- 4.5153 * Starting minute (inclussive) 
+	- 9.2807 * TemperatureC 
+	+ 6.4045 * DewpointC 
+	+ 3.7888 * PressurehPa 
+	- 0.0427 * WindDirectionDegrees 
+	- 15.9364 * WindSpeedKMH 
+	- 8.635 * WindSpeedGustKMH 
+	- 2.8643 * Humidity 
+	+ 0.3629 * dailyrainMM 
+	+ 8.9496 * SolarRadiationWatts_m2 
+	- 7446.007 [148/34.851%]
+
+Rule: 17
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 461
+	Hour <= 14.5
+	Hour <= 13.5
+	SolarRadiationWatts_m2 > 560
+	Humidity <= 58.5
+THEN
+
+Generated power = 
+	-2.51 * Hour 
+	- 4.1125 * Starting minute (inclussive) 
+	+ 3.6113 * TemperatureC 
+	+ 18.7524 * DewpointC 
+	+ 8.0947 * PressurehPa 
+	- 0.0247 * WindDirectionDegrees 
+	- 1.1337 * WindSpeedKMH 
+	- 0.369 * WindSpeedGustKMH 
+	- 4.7442 * Humidity 
+	+ 2.1245 * dailyrainMM 
+	+ 0.4888 * SolarRadiationWatts_m2 
+	- 5311.6518 [146/15.684%]
+
+Rule: 18
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 461
+	Hour > 14.5
+	PressurehPa <= 1020.5
+	Humidity > 51
+	Hour > 15.5
+THEN
+
+Generated power = 
+	-60.1802 * Hour 
+	- 6.3373 * Starting minute (inclussive) 
+	+ 143.1076 * TemperatureC 
+	- 123.3497 * DewpointC 
+	- 12.7259 * PressurehPa 
+	- 0.1988 * WindDirectionDegrees 
+	- 1.5357 * WindSpeedKMH 
+	- 21.2309 * WindSpeedGustKMH 
+	+ 29.9795 * Humidity 
+	+ 17.3782 * dailyrainMM 
+	- 0.7407 * SolarRadiationWatts_m2 
+	+ 13211.4487 [123/25.969%]
+
+Rule: 19
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 461
+	Hour <= 14.5
+	Hour <= 13.5
+	PressurehPa <= 1019.5
+	Hour > 9.5
+THEN
+
+Generated power = 
+	198.5546 * Hour 
+	- 0.8605 * Starting minute (inclussive) 
+	- 0.8504 * TemperatureC 
+	+ 0.9764 * DewpointC 
+	+ 1.8655 * PressurehPa 
+	- 0.0296 * WindDirectionDegrees 
+	- 3.8376 * WindSpeedKMH 
+	- 13.5167 * WindSpeedGustKMH 
+	- 1.3305 * Humidity 
+	+ 4.8194 * dailyrainMM 
+	+ 1.7086 * SolarRadiationWatts_m2 
+	- 1770.1459 [87/33.985%]
+
+Rule: 20
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 461
+	Hour <= 14.5
+	Hour <= 13.5
+	Hour > 12.5
+THEN
+
+Generated power = 
+	-5.9587 * Hour 
+	- 0.9309 * Starting minute (inclussive) 
+	+ 9.9568 * TemperatureC 
+	+ 14.7026 * DewpointC 
+	+ 4.8533 * PressurehPa 
+	- 0.0302 * WindDirectionDegrees 
+	- 0.6433 * WindSpeedKMH 
+	- 0.4504 * WindSpeedGustKMH 
+	- 3.6956 * Humidity 
+	+ 20.3926 * dailyrainMM 
+	+ 4.5307 * SolarRadiationWatts_m2 
+	- 4395.065 [106/17.159%]
+
+Rule: 21
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 461
+	Hour <= 14.5
+	Hour <= 13
+	Hour > 9.5
+	SolarRadiationWatts_m2 <= 549
+	DewpointC <= 7.5
+	Hour > 10.5
+THEN
+
+Generated power = 
+	233.1603 * Hour 
+	+ 0.0722 * Starting minute (inclussive) 
+	- 6.9391 * TemperatureC 
+	+ 52.9981 * DewpointC 
+	+ 6.9839 * PressurehPa 
+	- 0.5285 * WindDirectionDegrees 
+	- 0.3866 * WindSpeedKMH 
+	- 0.4344 * WindSpeedGustKMH 
+	- 4.3976 * Humidity 
+	+ 3.4246 * dailyrainMM 
+	+ 7.3788 * SolarRadiationWatts_m2 
+	- 11040.1317 [80/10.649%]
+
+Rule: 22
+IF
+	SolarRadiationWatts_m2 > 505
+	Hour <= 14.5
+	SolarRadiationWatts_m2 <= 672
+	Hour <= 13
+	Hour > 9.5
+THEN
+
+Generated power = 
+	-18.0806 * Hour 
+	- 6.6297 * Starting minute (inclussive) 
+	- 30.6282 * TemperatureC 
+	+ 60.4302 * DewpointC 
+	+ 23.937 * PressurehPa 
+	+ 0.3751 * WindDirectionDegrees 
+	- 10.1369 * WindSpeedKMH 
+	- 0.0556 * WindSpeedGustKMH 
+	- 14.2454 * Humidity 
+	+ 1.4498 * dailyrainMM 
+	+ 7.8858 * SolarRadiationWatts_m2 
+	- 24634.2237 [207/21.11%]
+
+Rule: 23
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 461
+	Hour <= 14.5
+	Starting minute (inclussive) > 22.5
+	SolarRadiationWatts_m2 <= 570.5
+THEN
+
+Generated power = 
+	-28.9256 * Hour 
+	- 3.6675 * Starting minute (inclussive) 
+	- 59.5114 * TemperatureC 
+	- 22.6454 * DewpointC 
+	+ 1.3737 * PressurehPa 
+	- 1.991 * WindDirectionDegrees 
+	- 0.2877 * WindSpeedKMH 
+	- 0.7023 * WindSpeedGustKMH 
+	- 6.7226 * Humidity 
+	+ 5.7275 * dailyrainMM 
+	+ 0.0377 * SolarRadiationWatts_m2 
+	+ 3246.7275 [140/35.11%]
+
+Rule: 24
+IF
+	SolarRadiationWatts_m2 <= 672
+	Hour > 9
+	Hour <= 14.5
+THEN
+
+Generated power = 
+	-42.8873 * Hour 
+	- 35.3838 * Starting minute (inclussive) 
+	- 72.0264 * TemperatureC 
+	+ 130.2409 * DewpointC 
+	- 20.3714 * PressurehPa 
+	- 0.0794 * WindDirectionDegrees 
+	- 0.4092 * WindSpeedKMH 
+	- 1.0028 * WindSpeedGustKMH 
+	- 19.8797 * Humidity 
+	+ 5.7254 * dailyrainMM 
+	+ 0.437 * SolarRadiationWatts_m2 
+	+ 25710.6992 [220/24.935%]
+
+Rule: 25
+IF
+	SolarRadiationWatts_m2 > 672
+	Hour > 14.5
+	SolarRadiationWatts_m2 > 772.5
+	DewpointC <= 11.5
+THEN
+
+Generated power = 
+	-663.1051 * Hour 
+	- 13.3685 * Starting minute (inclussive) 
+	- 39.4337 * TemperatureC 
+	+ 6.1689 * DewpointC 
+	- 10.971 * PressurehPa 
+	+ 0.0468 * WindDirectionDegrees 
+	+ 0.5227 * WindSpeedKMH 
+	- 23.7302 * WindSpeedGustKMH 
+	- 14.0748 * Humidity 
+	+ 1.9529 * SolarRadiationWatts_m2 
+	+ 24425.499 [80/15.911%]
+
+Rule: 26
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 299
+	PressurehPa > 1020.5
+	Humidity <= 58.5
+THEN
+
+Generated power = 
+	-13.0167 * Hour 
+	- 4.9074 * Starting minute (inclussive) 
+	- 1.0893 * TemperatureC 
+	+ 4.0353 * DewpointC 
+	- 2.4601 * PressurehPa 
+	- 0.0007 * WindDirectionDegrees 
+	- 0.0969 * WindSpeedKMH 
+	+ 0.8886 * WindSpeedGustKMH 
+	+ 1.6072 * Humidity 
+	+ 14.6193 * dailyrainMM 
+	+ 0.7928 * SolarRadiationWatts_m2 
+	+ 3042.7499 [57/4.545%]
+
+Rule: 27
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 299
+	SolarRadiationWatts_m2 <= 614
+	DewpointC > 8.5
+	PressurehPa > 1019.5
+THEN
+
+Generated power = 
+	-11.6684 * Hour 
+	- 0.1878 * Starting minute (inclussive) 
+	- 0.9568 * TemperatureC 
+	+ 15.9562 * DewpointC 
+	- 9.5098 * PressurehPa 
+	- 0.2408 * WindDirectionDegrees 
+	- 0.2748 * WindSpeedKMH 
+	+ 9.0944 * WindSpeedGustKMH 
+	+ 1.3729 * Humidity 
+	+ 0.5721 * dailyrainMM 
+	+ 1.012 * SolarRadiationWatts_m2 
+	+ 9968.3019 [59/17.883%]
+
+Rule: 28
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 <= 299
+	SolarRadiationWatts_m2 > 106
+	Humidity <= 91.5
+	Humidity > 60.5
+	PressurehPa <= 1025.5
+	DewpointC <= 8.5
+	WindSpeedGustKMH <= 15
+THEN
+
+Generated power = 
+	22.9257 * Hour 
+	+ 0.594 * Starting minute (inclussive) 
+	+ 3.5213 * TemperatureC 
+	+ 22.8086 * DewpointC 
+	+ 0.1138 * PressurehPa 
+	+ 0.0625 * WindDirectionDegrees 
+	- 0.6728 * WindSpeedKMH 
+	+ 5.0434 * WindSpeedGustKMH 
+	+ 0.5098 * Humidity 
+	+ 0.6157 * dailyrainMM 
+	+ 0.2601 * SolarRadiationWatts_m2 
+	- 260.0738 [48/4.904%]
+
+Rule: 29
+IF
+	SolarRadiationWatts_m2 <= 672
+	SolarRadiationWatts_m2 > 301.5
+	DewpointC <= 8.5
+THEN
+
+Generated power = 
+	-9.0436 * Hour 
+	- 4.0231 * Starting minute (inclussive) 
+	+ 25.574 * TemperatureC 
+	+ 16.194 * DewpointC 
+	- 24.8472 * PressurehPa 
+	- 0.6852 * WindDirectionDegrees 
+	+ 7.8372 * WindSpeedKMH 
+	+ 10.864 * WindSpeedGustKMH 
+	+ 19.8207 * Humidity 
+	+ 2.3782 * dailyrainMM 
+	+ 2.0941 * SolarRadiationWatts_m2 
+	+ 23736.875 [116/13.878%]
+
+Rule: 30
+IF
+	Hour <= 9
+	SolarRadiationWatts_m2 > 106
+	Humidity <= 92.5
+THEN
+
+Generated power = 
+	243.0064 * Hour 
+	+ 3.7496 * Starting minute (inclussive) 
+	+ 29.2339 * TemperatureC 
+	- 54.6061 * DewpointC 
+	+ 0.1547 * PressurehPa 
+	- 0.0331 * WindDirectionDegrees 
+	- 6.7059 * WindSpeedKMH 
+	- 0.221 * WindSpeedGustKMH 
+	+ 3.57 * Humidity 
+	+ 0.6592 * dailyrainMM 
+	+ 0.3194 * SolarRadiationWatts_m2 
+	- 1776.7175 [226/10.103%]
+
+Rule: 31
+IF
+	SolarRadiationWatts_m2 > 671.5
+	Hour <= 14.5
+	Hour <= 13.5
+	PressurehPa > 1025.5
+	Starting minute (inclussive) <= 42.5
+THEN
+
+Generated power = 
+	-228.1836 * Hour 
+	- 4.5157 * Starting minute (inclussive) 
+	+ 0.7803 * TemperatureC 
+	- 10.1331 * DewpointC 
+	+ 5.4299 * PressurehPa 
+	- 0.018 * WindDirectionDegrees 
+	+ 6.285 * WindSpeedGustKMH 
+	+ 0.6391 * Humidity 
+	+ 0.2603 * dailyrainMM 
+	+ 6.8402 * SolarRadiationWatts_m2 
+	- 2994.8094 [78/4.188%]
+
+Rule: 32
+IF
+	SolarRadiationWatts_m2 > 671.5
+	Hour <= 14.5
+	Hour <= 13.5
+	SolarRadiationWatts_m2 <= 737.5
+	Hour <= 12.5
+	DewpointC <= 7.5
+THEN
+
+Generated power = 
+	-183.5307 * Hour 
+	- 1.8117 * Starting minute (inclussive) 
+	- 11.6209 * TemperatureC 
+	- 18.4494 * DewpointC 
+	+ 26.6505 * PressurehPa 
+	+ 0.0416 * WindDirectionDegrees 
+	- 0.3146 * WindSpeedKMH 
+	+ 6.5627 * WindSpeedGustKMH 
+	- 10.9326 * Humidity 
+	+ 0.2009 * dailyrainMM 
+	+ 8.0293 * SolarRadiationWatts_m2 
+	- 25486.4292 [109/17.521%]
+
+Rule: 33
+IF
+	SolarRadiationWatts_m2 > 671.5
+	Hour <= 14.5
+	SolarRadiationWatts_m2 > 706
+	Starting minute (inclussive) > 37.5
+	Hour > 12.5
+THEN
+
+Generated power = 
+	-840.599 * Hour 
+	- 38.0295 * Starting minute (inclussive) 
+	- 41.7635 * TemperatureC 
+	+ 51.2193 * DewpointC 
+	- 13.8382 * PressurehPa 
+	- 0.302 * WindSpeedKMH 
+	- 0.7486 * WindSpeedGustKMH 
+	- 9.0477 * Humidity 
+	+ 3.9384 * SolarRadiationWatts_m2 
+	+ 28725.366 [109/19.832%]
+
+Rule: 34
+IF
+	SolarRadiationWatts_m2 > 671.5
+	Hour <= 14.5
+	SolarRadiationWatts_m2 <= 714.5
+	Hour <= 13.5
+THEN
+
+Generated power = 
+	-167.9328 * Hour 
+	- 5.1073 * Starting minute (inclussive) 
+	- 5.0873 * TemperatureC 
+	+ 31.0622 * DewpointC 
+	+ 35.0567 * PressurehPa 
+	- 0.1775 * WindDirectionDegrees 
+	- 3.4093 * WindSpeedKMH 
+	+ 0.7415 * WindSpeedGustKMH 
+	+ 0.9891 * Humidity 
+	- 3.5513 * dailyrainMM 
+	+ 10.7255 * SolarRadiationWatts_m2 
+	- 37290.2885 [72/20.551%]
+
+Rule: 35
+IF
+	SolarRadiationWatts_m2 > 509
+	Hour <= 14.5
+	SolarRadiationWatts_m2 > 716
+	TemperatureC > 16.5
+THEN
+
+Generated power = 
+	-161.6337 * Hour 
+	- 4.863 * Starting minute (inclussive) 
+	+ 48.2184 * TemperatureC 
+	- 103.0895 * DewpointC 
+	- 1.3773 * PressurehPa 
+	- 0.0426 * WindDirectionDegrees 
+	- 7.8494 * WindSpeedKMH 
+	+ 9.7625 * WindSpeedGustKMH 
+	+ 23.0701 * Humidity 
+	- 5.3921 * dailyrainMM 
+	+ 3.1435 * SolarRadiationWatts_m2 
+	+ 4316.9908 [210/16.196%]
+
+Rule: 36
+IF
+	Hour > 9.5
+	Hour > 14.5
+	Hour > 15.5
+	SolarRadiationWatts_m2 <= 683
+THEN
+
+Generated power = 
+	-32.542 * Hour 
+	- 5.9655 * Starting minute (inclussive) 
+	+ 11.4334 * TemperatureC 
+	+ 10.5935 * DewpointC 
+	- 0.3497 * PressurehPa 
+	+ 1.1136 * WindSpeedKMH 
+	+ 1.1667 * WindSpeedGustKMH 
+	- 2.1722 * Humidity 
+	+ 1.9047 * SolarRadiationWatts_m2 
+	+ 907.5248 [66/15.58%]
+
+Rule: 37
+IF
+	Hour > 9.5
+	Hour > 14.5
+THEN
+
+Generated power = 
+	-580.2943 * Hour 
+	- 9.8887 * Starting minute (inclussive) 
+	- 72.0372 * TemperatureC 
+	+ 127.7521 * DewpointC 
+	- 7.6979 * PressurehPa 
+	+ 1.3907 * WindSpeedGustKMH 
+	- 23.1422 * Humidity 
+	+ 20.0376 * dailyrainMM 
+	+ 2.1498 * SolarRadiationWatts_m2 
+	+ 18897.9074 [242/22.537%]
+
+Rule: 38
+IF
+	Hour > 9.5
+	SolarRadiationWatts_m2 > 714.5
+	SolarRadiationWatts_m2 > 794.5
+THEN
+
+Generated power = 
+	-13.3029 * Starting minute (inclussive) 
+	- 59.6173 * TemperatureC 
+	+ 62.6065 * DewpointC 
+	- 6.0373 * PressurehPa 
+	- 2.6731 * WindSpeedKMH 
+	- 13.1259 * Humidity 
+	- 36.7968 * dailyrainMM 
+	+ 1.7395 * SolarRadiationWatts_m2 
+	+ 10838.9002 [55/22.651%]
+
+Rule: 39
+IF
+	Hour > 9.5
+	SolarRadiationWatts_m2 <= 714.5
+	Humidity <= 40.5
+THEN
+
+Generated power = 
+	-26.688 * Starting minute (inclussive) 
+	- 69.8859 * TemperatureC 
+	+ 103.7689 * DewpointC 
+	+ 21.195 * PressurehPa 
+	- 0.2597 * WindDirectionDegrees 
+	- 4.8443 * WindSpeedGustKMH 
+	- 17.7634 * Humidity 
+	+ 2.4237 * SolarRadiationWatts_m2 
+	- 18693.5361 [39/5.743%]
+
+Rule: 40
+IF
+	Hour <= 9.5
+	SolarRadiationWatts_m2 > 106
+	PressurehPa > 1021.5
+THEN
+
+Generated power = 
+	116.4872 * Hour 
+	+ 0.615 * Starting minute (inclussive) 
+	+ 43.9006 * TemperatureC 
+	- 6.311 * DewpointC 
+	- 12.194 * PressurehPa 
+	- 0.05 * WindDirectionDegrees 
+	- 3.5327 * WindSpeedGustKMH 
+	+ 2.5367 * Humidity 
+	+ 418.8145 * dailyrainMM 
+	+ 0.419 * SolarRadiationWatts_m2 
+	+ 11259.2999 [34/4.816%]
+
+Rule: 41
+
+Generated power = 
+	110.6441 * TemperatureC 
+	- 119.076 * DewpointC 
+	- 10.4939 * PressurehPa 
+	- 10.9899 * WindSpeedGustKMH 
+	+ 23.9538 * Humidity 
+	+ 5.1262 * SolarRadiationWatts_m2 
+	+ 8520.6151 [181/20.612%]
+
+
+
+Time taken to build model: 77.01 seconds
+
+=== Evaluation on test split ===
+=== Summary ===
+
+Correlation coefficient                  0.9505
+Mean absolute error                    162.229 
+Root mean squared error                382.0424
+Relative absolute error                 18.6757 %
+Root relative squared error             31.0766 %
+Total Number of Instances             7258     
+
